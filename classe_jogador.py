@@ -4,7 +4,7 @@ from caminho_relativo import resource_path as rp
 class Jogador:
     def __init__(self):
         self.imagem = pg.image.load(rp("scr/barbiebailarina.png"))
-        self.imagem = pg.transform.scale(self.imagem,(120,200))
+        self.imagem = pg.transform.scale(self.imagem,(160,240))
 
         self.pos_x = 800
         self.pos_y = 520
@@ -46,7 +46,7 @@ class Jogador:
     def perder(self):
         self.som3.play()
 
-    def ganhar(self):
+    def VITORIA(self):
         self.som2.play()
 
     def pontos(self):

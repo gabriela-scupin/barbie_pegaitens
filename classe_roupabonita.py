@@ -8,15 +8,18 @@ class Roupabonita:
         self.roupabonita = pg.transform.scale(self.roupabonita, (80,80))
         self.pos_y_roupabonita = -10
     #criando um atributo
-        self.pos_x_roupabonita = random.randint(0,500)
-        self.velocidade = random.randint(1,2)
+        self.pos_x_roupabonita = random.randint(0,1200)
+        self.velocidade_y = random.randint(8,9)
+        self.velocidade_x = 0
 
     #criando a mascara para utilizar na verf
         self.mascara = pg.mask.from_surface(self.roupabonita)
 
 
     def andar(self):
-         self.pos_y_roupabonita = self.pos_y_roupabonita + self.velocidade
+         self.pos_y_roupabonita = self.pos_y_roupabonita + self.velocidade_y
+         self.pos_x_roupabonita = self.pos_x_roupabonita + self.velocidade_x
+
 
          if self.pos_y_roupabonita>900:
               self.voltar()
@@ -27,4 +30,4 @@ class Roupabonita:
     def voltar(self):
         self.pos_y_roupabonita = -100
         self.pos_x_roupabonita = random.randint(0,500)
-        self.velocidade = random.randint(5,10)
+        self.velocidade = random.randint(8,9)
